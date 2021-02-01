@@ -1,0 +1,226 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container{
+	width: 80%;
+	margin: 0 auto;
+}
+img{
+	width: 100%;
+}
+section{
+	padding: 200px 0;
+}
+.section_title h2{
+	color: black; 
+	font-size: 60px; 
+	text-align: center;
+	padding: 100px 0;
+}
+.service_items{}
+.service_photo{
+	width: 32%;
+	float: left;
+	margin-left: 2%;
+	position: relative;
+	margin-bottom: 22px;
+	overflow: hidden;
+
+}
+.service_photo:first-child,
+.service_photo:nth-child(4){
+	margin-left: 0;
+}
+.service_overlay{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background: rgba(52, 73, 94, .7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	transition: .7s;
+}
+.service_photo:hover .service_overlay{
+	top: 0;
+}
+
+
+
+.team_members{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+.member{
+	width: 23.5%;
+}
+.profile_photo{
+	position: relative;
+	overflow: hidden;
+}
+.team_overlay{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 100%;
+	background:rgba(52, 73, 94, .7) ;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .7s;
+}
+.profile_photo:hover .team_overlay{
+	right: 0;
+}
+
+
+/* ============================
+Image hover effect all items
+============================ */
+
+.zoom_photo{
+	width: 23.5%;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	border: 2px solid black;
+}
+.zoom_photo img{
+	transition: all .5s;
+}
+.zoom_photo:hover img{
+	transform: scale(0);
+}
+.zoom_comtent{
+	background: red;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 40px;
+	color: #fff;
+	transition: all .5s;
+	transform: scale(0) rotate(-180deg);
+	opacity: 0;
+}
+.zoom_photo:hover .zoom_comtent{
+	opacity: 1;
+	transform: scale(1) rotate(0deg);
+	transition-delay: .2s;
+}
+
+/* ============================
+Image hover effect all items 2
+============================ */
+.image_hover_section{
+	background: #ecf0f1;
+}
+.zoom_pic{
+	width: 23.5%;
+	margin: 0 auto;
+	border: 1px solid black;
+	position: relative;
+	
+}
+
+.zoom_pic .pic{
+	transition: all .5s;
+	transform-origin: 95% 50% 0;
+	position: relative;
+	z-index: 1;
+}
+.zoom_pic .pic::after{
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 95%;
+	height: 8px;
+	width: 8px;
+	background-color: black;
+	border-radius: 50%;
+}
+.zoom_pic .pic img{
+	border-radius: 50%;
+}
+.zoom_pic:hover .pic{
+	transform: rotate(-140deg);
+		
+}
+
+.content{
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	position: absolute;
+	background-color: red;
+	top: 0;
+	left: 0;
+	padding: 70px 40px;
+	
+}
+
+/* ============================
+Image hover effect all items 3
+============================ */
+
+.rotate_pic{
+	width: 23.5%;
+	margin: 0 auto;
+	position: relative;
+	perspective: 1000px;
+	cursor: pointer;
+	overflow: hidden;
+}
+.rotate_pic .pic{
+	transform: rotateY(0);
+	transition: all .5s ease-in-out 0s;
+}
+.rotate_pic:hover .pic{
+	transform: rotateY(-90deg);
+}
+.rotate_content{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background:rgba(52, 73, 94, .7) ;
+	color: #fff;
+	padding: 60px 20px;
+	text-align: center;
+	transform: rotateY(-90deg);
+	transition: all .5s ease-in-out 0s;
+
+}
+.rotate_pic:hover .rotate_content{
+	transform: rotateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
